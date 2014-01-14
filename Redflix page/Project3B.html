@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Project 3B</title>
+    <style type="text/css">
+        body
+        {
+            margin: 0;
+            padding: 0 0 5px 0;
+            background-color: rgb(238, 238, 238);
+            
+        }
+        #content
+        {            
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1em;
+            color: #000;
+        }
+        #first
+        {
+            margin-top: 0;
+        }
+        #firstPic
+        {
+            vertical-align: top;
+        }
+        #footer
+        {
+            padding: 10px 12px 10px 12px;
+            color: #000;
+            background-color: #FFF;
+            font-size: 0.7em;
+        }
+        .footer
+        {
+            margin-left: 16px;
+        }
+        #header
+        {
+            background-color: rgb(187, 17, 17);
+            color: #FFF;
+            padding: 10px;
+            position: relative;
+        }
+        #headerTitle
+        {
+            font-size: 1.85em;
+            font-weight: normal;
+            margin-right: 22px;
+        }
+        #hTitle
+        {
+            position: absolute;
+            top: 10px;
+            left: 10px;   
+        }
+        #innerContent
+        {
+            padding: 40px 18px 20px 20px;
+            background-color: #FFF;
+            position: relative;
+        }
+        .lastRow
+        {
+            border: none;
+        }
+        #loraxSpecs
+        {
+            font-size: 0.80em;
+        }
+        #loraxTitle
+        {
+            font-size: 1.5em;
+            margin: 0;
+        }
+        #main
+        {
+            width: 800px;
+            margin: auto;
+        }
+        #mainMovieInfo
+        {
+            position: absolute;
+            top:40px;
+            right:20px;
+            width: 460px;    
+        }
+        .menu
+        {
+            margin-right: 15px;
+            color: #FFF;
+            padding-bottom: 5px;
+            display:inline;
+        }
+        #menuItems
+        {
+            position: absolute;
+            top: 18px;
+            left: 160px;
+            padding-bottom: 5px;
+            font-size: 0.97em;
+            color: rgb(255, 255, 240);
+        }
+        .movieDivider
+        {
+            margin: 0;
+        }
+        #movies
+        {
+            background-color: rgb(255, 250, 204);
+            padding: 10px 20px 10px 20px;
+            text-align: center;
+            border: 1px solid rgb(238, 234, 187);
+        }
+        #moviesHeader
+        {
+            color: rgb(68, 68, 68);
+            font-size: 1.0em;
+            margin-bottom: 0;
+            margin-top: 10px;
+        }
+        .movie
+        {
+            text-align: left;
+            position: relative;
+        }
+        .movieInfo
+        {
+            padding-left: 25px;
+        }
+        .movieTitle
+        {
+            font-size: 1.2em;
+            margin: 8px 0 8px 0;
+        }
+        #search
+        {
+            position: absolute;
+            top: 15px;
+            right: 10px;
+            border-radius: 4px;
+            height: 15px;
+        }
+        
+        table
+        {
+            border-spacing: 0;
+        }
+        td
+        {
+            text-align: left;
+            border-bottom: 1px solid rgb(187, 187, 187);
+            margin: 0;
+        }
+        td img
+        {
+            width: 70px;
+            height: 100px;
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="content">
+            <div id="header">
+                <div id=hTitle">
+                    <span id="headerTitle">REDFLIX</span>
+                </div>
+                <div id="menuItems">
+                    <span class="menu">Watch Instantly</span>
+                    <span class="menu">Just for Kids</span>
+                    <span class="menu">Personalize</span>
+                </div>
+                <input type="text" id="search"/>
+            </div>
+            <div id="innerContent">
+                <img id="lorax" src="http://i.imgur.com/zvhmrIS.jpg"/>
+                <div id="mainMovieInfo">
+                    <p id="loraxTitle">The Lorax</p>
+                    <hr/>
+                    <p id="loraxSpecs">2012, PG, 1h 26min</p>
+                    <p>This animated adaptation of the incisive Dr. Seuss classic
+                    features the voice of Danny DeVito as the Lorax, a forest-dwelling
+                    creature who labors to prevent the short-sighted Once-ler from decimating
+                    the environment in order to turn a profit.</p>
+                </div>
+            </div>
+            <div id="movies">
+                <h2 id="moviesHeader">Other Movies You May Enjoy</h2>
+                <table>
+                    <tr>
+                        <td id="firstPic">
+                            <img src="http://i.imgur.com/9vycBMH.jpg"/>
+                        </td>
+                        <td class="movieInfo">
+                        <p class="movieTitle" id="first">Rango</p>
+                        <p>Johnny Depp lends his voice to the title character, an adventurous
+                        family pet who leaves home to learn more about himself in this comic
+                        animated tale also featuring the vocal talents of Abigail Breslin,
+                        Harry Dean Stanton and Ned Beatty.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                           <img src="http://i.imgur.com/2vOPPPM.jpg"/> 
+                        </td>
+                        <td class="movieInfo">
+                        <p class="movieTitle">ParaNorman</p>
+                        <p>When an army of zombies invades a small town, it's up to an odd local
+                        boy with a knack for communicating with the dead to save the day.  But
+                        judegmental adults prove to be even more formidable adversaries.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="lastRow">
+                            <img src="http://i.imgur.com/dACjGGC.jpg"/>
+                        </td>
+                        <td class="movieInfo lastRow">
+                        <p class="movieTitle">The Adventures of Tintin</p>
+                        <p>Blockbuster filmmakers Steven Spielberg and Peter Jackson team up
+                        for this 3-D motion capture adaptation of Georges Remi's classic comic
+                        strip, centered around the adventures of fearless young journalist
+                        Tintin and his trusty dog, Snowy.</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="footer">
+                <span>© 2013 Redflix, Inc.</span>
+                <span class="footer">About Us</span>
+                <span class="footer">Contact Us</span>
+                <span class="footer">Blog</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
