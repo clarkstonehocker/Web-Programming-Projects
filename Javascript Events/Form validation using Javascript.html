@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Project 4-2</title>
+    <style type="text/css">
+        #actions
+        {
+            text-align:center;
+        }
+        body
+        {
+            font-family: Helvetica, Arial, sans-serif;
+            background-color: #EEE;
+            margin: 0;
+        }
+        #cancel
+        {
+            font-size: 12pt;
+            background-color: #CCC;
+            border: 1px ridge #000;
+            border-radius: 5px;
+            padding: 5px 10px 5px 10px;
+            margin: 20px;
+            color: #000;
+        }
+        #cancel:hover
+        {
+            background-color: #EEE;
+        }
+        .error
+        {
+            color: #FF0000;
+            display: none;
+        }
+        form
+        {
+            width: 320px;
+            margin:auto;
+            text-align: left;
+            margin-top: 15px;
+        }
+        input
+        {
+            outline: none;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 3px;
+            border: 1px solid #000;
+            border-style: outset;
+            
+        }
+        input:focus
+        {
+            box-shadow: 1px 1px 1px 2px #003366;
+        }
+        label
+        {
+            display: inline-block;
+            width: 108px;
+        }
+        #main
+        {
+            width: 750px;
+            margin:auto;
+            text-align: center;
+            background-color: #FFF;
+            padding-top: 1px;
+            border: 1px solid #000;
+            border-radius: 3px;
+        }
+        #messages
+        {
+            text-align: left;
+            padding: 0 10px 0 10px;
+        }
+        #submit
+        {
+            font-size: 12pt;
+            background-color: #223366;
+            border: 1px ridge #000;
+            border-radius:5px;
+            padding: 5px 10px 5px 10px;
+            margin: 20px;
+            color: #FFF;
+        }
+        #submit:hover
+        {
+            background-color: #05afba;
+        }
+    </style>
+    <script type="text/javascript">
+        function SubmitForm()
+        {
+            var firstError = true;
+            if(ValidateUserName())
+            {
+                document.getElementById("uName").style.display = "none";
+                document.getElementById("userNameError").style.display = "none";
+            }
+            else if(!ValidateUserName())
+            {
+                if(firstError)
+                {
+                    document.getElementById("userName").focus();
+                    firstError = false;
+                }
+                document.getElementById("uName").style.display = "inline";
+                document.getElementById("userNameError").style.display = "block";
+            }
+            if(ValidatePassword())
+            {
+                document.getElementById("pass").style.display ="none";
+                document.getElementById("passwordError").style.display = "none";
+            }
+            else if(!ValidatePassword())
+            {
+                if(firstError)
+                {
+                    document.getElementById("password").focus();
+                    firstError = false;
+                }
+                document.getElementById("pass").style.display ="inline";
+                document.getElementById("passwordError").style.display = "block";
+            }
+            if(ValidateFirstName())
+            {
+                document.getElementById("fname").style.display = "none";
+                document.getElementById("fName").style.display = "none";
+            }
+            else if(!ValidateFirstName())
+            {
+                if(firstError)
+                {
+                    document.getElementById("firstName").focus();
+                    firstError = false;
+                }
+                document.getElementById("fname").style.display = "inline";
+                document.getElementById("fName").style.display = "block";
+            }
+            if(ValidateLastName())
+            {
+                document.getElementById("lname").style.display = "none";
+                document.getElementById("lName").style.display = "none";
+            }
+            else if(!ValidateLastName())
+            {
+                if(firstError)
+                {
+                    document.getElementById("lastName").focus();
+                    firstError = false;
+                }
+                document.getElementById("lname").style.display = "inline";
+                document.getElementById("lName").style.display = "block";
+            }
+            if(ValidatePhone())
+            {
+                document.getElementById("phoneNum").style.display="none";
+                document.getElementById("phoneError").style.display = "none";
+            }
+            else if(!ValidatePhone())
+            {
+                if(firstError)
+                {
+                    document.getElementById("phone").focus();
+                }
+                document.getElementById("phoneNum").style.display="inline";
+                document.getElementById("phoneError").style.display = "block";
+            }
+            
+        }
+        function ValidateUserName()
+        {
+            var userName = document.getElementById("userName").value;
+            var userNameRegEx=/^[a-zA-Z]+$/;
+            return userNameRegEx.exec(userName);
+        }
+        function ValidatePassword()
+        {
+            var pass = document.getElementById("password").value;
+            var passwordRegEx = /^(?=.*\d).{8,}/;
+            //var passRegEx = /\d+/;
+            return (passwordRegEx.test(pass)); //&& (passRegEx.test(pass));
+        }
+        function ValidateFirstName()
+        {
+            var firstName = document.getElementById("firstName").value;
+            var firstNameRegEx = /^[a-zA-Z]+$/;
+            return firstNameRegEx.test(firstName);
+        }
+        function ValidateLastName()
+        {
+            var lastName = document.getElementById("lastName").value;
+            var lastNameRegEx = /^[a-zA-Z]+$/;
+            return lastNameRegEx.test(lastName);
+        }
+        function ValidatePhone()
+        {
+            var phoneNumber = document.getElementById("phone").value;
+            var phoneRegEx = /^\d{3}-\d{3}-\d{4}$/;
+            return phoneRegEx.test(phoneNumber);
+        }
+    </script>
+</head>
+<body>
+    <div id="main">
+        <h1>Registration Form</h1>
+        <div id="messages">
+            <p>All fields are required. Phone number must be a US phone number (ddd-ddd-dddd).
+            Username must be only uppercase and lowercase characters.
+            Password must be at least 8 characters long and contain at least one digit.</p>
+            <br/>
+            <span class="error" id="userNameError">Invalid Username: username must consist of one or more of only the characters a-z and A-Z.</span>
+            <span class="error" id="passwordError">Invalid Password: passwords must be at least 8 characters and contain at least 1 digit.</span>
+            <span class="error" id="fName">Invalid First Name: first name must be one or more alphabetic characters.</span>
+            <span class="error" id="lName">Invalid Last Name: last name must be one or more alphabetic characters.</span>
+            <span class="error" id="phoneError">Invalid Phone Number: only phone numbers in the format XXX-XXX-XXXX are allowed.</span>
+        </div>
+        <form>
+            <label for="userName">User Name:</label><input type="text" id="userName" placeholder="A-Z and a-z only"/><span class="error" id="uName">*</span>
+            <br/>
+            <label for="password">Password:</label><input type="password" id="password" placeholder=">= 8 chars. and >= 1 digit"/><span class="error" id="pass">*</span>
+            <br/>
+            <label for="firstName">First Name:</label><input type="text" id="firstName" placeholder="Your given name"/><span class="error" id="fname">*</span>
+            <br/>
+            <label for="lastName">Last Name:</label><input type="text" id="lastName" placeholder="Your family or sir name"/><span class="error" id="lname">*</span>
+            <br/>
+            <label for="phone">Phone Number:</label><input type="text" id="phone" placeholder="000-000-0000"/><span class="error" id="phoneNum">*</span>
+            <br/>
+        </form>
+        <div id="actions">
+            <button id="submit" onclick="if(SubmitForm()) this.form.submit()"><span>Submit</span></button>
+        </div>
+    </div>
+</body>
+</html>
