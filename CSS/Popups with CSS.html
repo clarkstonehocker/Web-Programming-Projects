@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Project 3-2</title>
+    <style>
+        body
+        {
+            margin:0;
+            padding:0;
+        }
+        .headerLink{
+            text-decoration: none;
+            margin-right: 16px;
+            position: relative;
+        }
+        a:visited
+        {
+            color: #FFF;
+        }
+        #main
+        {
+            border: 1px solid #000;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 10pt;
+            width: 678px;
+            margin: auto;
+        }
+        #header
+        {
+            color: #FFF;
+            background-image: url("../Web-Programming-Projects/Popups with only CSS/blueWavesHeader.jpg");
+            padding: 8px;
+        }
+        #LeftSide
+        {
+            float:left;
+            width: 214px;
+            border: 1px solid #000;
+            padding: 8px;
+            margin: 1px;
+        }
+        #RightSide
+        {
+            float:right;
+            width: 424px;
+            border: 1px solid #000;
+            padding: 8px;
+            margin: 1px;
+        }
+        #footer
+        {
+            clear: both;
+            padding: 8px;
+        }
+        li.sideMenu
+        {
+            list-style-type: none;
+            background-color: lightblue;
+            margin: 2px 0 2px 0;
+            padding-left: 20px;
+        }
+        li.sideMenu:hover
+        {
+            color: #FFF;
+        }
+        ul#sideMenu
+        {
+           padding: 0; 
+        }
+        div#header a span
+        {
+            display: none;
+            color: #000;
+            background-color: lightblue;
+            border: 1px solid #000;
+            width: 212px;
+            padding: 16px;
+            z-index: 100;
+            position: absolute;
+            top: 0;
+            left: 76px;
+        }
+        div#header a:hover span
+        {
+            display: block; 
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <h1>The Name of the Website</h1>
+            <a href="" class="headerLink">Menu Item 1<span>Here you can learn all about Menu Item 1. Aren't you interested to find out?</span></a>
+            
+            <a href="" class="headerLink">Menu Item 2<span>Here you can learn all about Menu Item 2. Aren't you interested to find out?</span></a>
+            <a href="" class="headerLink">Menu Item 3<span>Here you can learn all about Menu Item 3. Aren't you interested to find out?</span></a>
+        </div>
+        <div id="content">
+            <div id="LeftSide">
+                <p>Here's some menu navigation:</p>
+                <ul id="sideMenu">
+                    <li class="sideMenu">Home</li>
+                    <li class="sideMenu">Better Content</li>
+                    <li class="sideMenu">Best Content</li>
+                    <li class="sideMenu">Login</li>
+                </ul>
+                <p>On a blog, a google advertisement might go here, but on a business site this is
+                usually filled with company news, important announcements, or something else.</p>
+            </div>
+            <div id="RightSide">
+                <h3>Title of This Content Page</h3>
+                <p>This is a basic html and css webpage.</p>
+                <p>This page primarily demonstrates the various ways of positioning and sizing html
+                elements using css.</p>
+                <p>Blah blah blah blah.</p>
+                <p>This is more comentary on the video from above. Something about the lighting,
+                the symobolism of the gun rack, and the brilliant acting of Mike Myers, the greatest
+                actor of all time.</p>
+            </div>
+        </div>
+        <div id="footer">
+            <p>This is the content that would go in the footer.  Probably another menu, with legal
+            notices, ways to contact the company, and anything else that might be appropriate.</p>
+        </div>
+    </div>
+</body>
+</html>
